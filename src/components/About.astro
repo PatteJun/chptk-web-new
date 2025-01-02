@@ -6,14 +6,27 @@ import Container from './Container.astro';
     <Container>
         <SectionHeading text="A Proven Track Record of Driving Innovation" />
         <div class="content">
-            <p class="intro">
-                Hi, I'm Christoph, a freelancing Product Owner with a passion for building impactful digital products. 
-                With over 11 of experience, I specialize in Automotive IT and helping businesses grow organically.
-            </p>
-            <p class="expertise">
-                I turn abstract ideas into actionable MVPs, manage end-to-end product pipelines, 
-                and optimize user experiences to drive measurable growth.
-            </p>
+            <div class="text-content">
+                <p class="intro">
+                    Hi, I'm Christoph, a freelancing Product Owner with a passion for building impactful digital products. 
+                    With over 11 of experience, I specialize in Automotive IT and helping businesses grow organically.
+                </p>
+                <p class="expertise">
+                    I turn abstract ideas into actionable MVPs, manage end-to-end product pipelines, 
+                    and optimize user experiences to drive measurable growth.
+                </p>
+                <a href="https://de.linkedin.com/in/christoph-paterok-a9b802132" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                    Connect on LinkedIn
+                </a>
+            </div>
+            <div class="image-container">
+                <img 
+                    src="/christoph-paterok.jpg" 
+                    alt="Christoph Paterok"
+                    width="400"
+                    height="400"
+                />
+            </div>
         </div>
     </Container>
 </section>
@@ -26,7 +39,11 @@ import Container from './Container.astro';
     }
 
     .content {
-        max-width: 800px;
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 4rem;
+        align-items: center;
+        max-width: 1000px;
     }
 
     .intro, .expertise {
@@ -44,13 +61,49 @@ import Container from './Container.astro';
         opacity: 0.9;
     }
 
+    .linkedin-link {
+        font-family: 'JetBrains Mono', monospace;
+        display: inline-block;
+        color: var(--primary-color);
+        text-decoration: none;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 2px;
+        transition: opacity 0.2s ease;
+    }
+
+    .linkedin-link:hover {
+        opacity: 0.8;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
     @media (max-width: 768px) {
         .about {
             padding: 4rem 0;
         }
 
+        .content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
         .intro, .expertise {
             font-size: 1rem;
+        }
+
+        .image-container {
+            order: -1;
+            max-width: 300px;
+            margin: 0 auto;
         }
     }
 </style>
