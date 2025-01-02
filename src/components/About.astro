@@ -2,7 +2,7 @@
 import SectionHeading from './SectionHeading.astro';
 import Container from './Container.astro';
 ---
-<section class="about">
+<section class="about" id="about">
     <Container>
         <SectionHeading text="A Proven Track Record of Driving Innovation" />
         <div class="content">
@@ -22,6 +22,7 @@ import Container from './Container.astro';
     .about {
         padding: 6rem 0;
         background-color: #f8f8f8;
+        scroll-margin-top: 5rem;
     }
 
     .content {
