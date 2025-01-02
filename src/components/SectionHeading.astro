@@ -1,0 +1,22 @@
+---
+interface Props {
+    text: string;
+}
+
+const { text } = Astro.props;
+---
+<h2 class="section-heading">{text}</h2>
+
+<style>
+    .section-heading {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+        .section-heading {
+            font-size: 2rem;
+        }
+    }
+</style>

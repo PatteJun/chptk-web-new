@@ -1,0 +1,55 @@
+---
+import Container from './Container.astro';
+import SectionHeading from './SectionHeading.astro';
+import CaseStudyCard from './CaseStudyCard.astro';
+---
+<section class="case-studies">
+    <Container>
+        <SectionHeading text="Proven Results" />
+        <p class="subheading">Driving Growth Across Industries</p>
+        <div class="case-studies-grid">
+            <CaseStudyCard 
+                company="CARAUKTION AG"
+                description="Managed end-to-end product pipelines for a B2B online auction platform in Automotive IT, delivering multiple successful MVPs and optimizing products for growth."
+            />
+            <CaseStudyCard 
+                company="Take Memories GmbH"
+                description="Concepted content pipelines for organic traffic growth across multiple websites, resulting in enhanced user engagement and search visibility."
+            />
+        </div>
+    </Container>
+</section>
+
+<style>
+    .case-studies {
+        padding: 6rem 0;
+        background-color: #f8f8f8;
+    }
+
+    .subheading {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        opacity: 0.8;
+    }
+
+    .case-studies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .case-studies {
+            padding: 4rem 0;
+        }
+
+        .case-studies-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .subheading {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+    }
+</style>

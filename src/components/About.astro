@@ -1,0 +1,55 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import Container from './Container.astro';
+---
+<section class="about">
+    <Container>
+        <SectionHeading text="A Proven Track Record of Driving Innovation" />
+        <div class="content">
+            <p class="intro">
+                Hi, I'm Christoph, a freelancing Product Owner with a passion for building impactful digital products. 
+                With over 11 of experience, I specialize in Automotive IT and helping businesses grow organically.
+            </p>
+            <p class="expertise">
+                I turn abstract ideas into actionable MVPs, manage end-to-end product pipelines, 
+                and optimize user experiences to drive measurable growth.
+            </p>
+        </div>
+    </Container>
+</section>
+
+<style>
+    .about {
+        padding: 6rem 0;
+        background-color: #f8f8f8;
+    }
+
+    .content {
+        max-width: 800px;
+    }
+
+    .intro, .expertise {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .intro {
+        color: var(--text-color);
+    }
+
+    .expertise {
+        color: var(--text-color);
+        opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+        .about {
+            padding: 4rem 0;
+        }
+
+        .intro, .expertise {
+            font-size: 1rem;
+        }
+    }
+</style>

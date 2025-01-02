@@ -1,0 +1,36 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<div class="service-card">
+    <h3>{title}</h3>
+    <p>{description}</p>
+</div>
+
+<style>
+    .service-card {
+        background: var(--background-color);
+        padding: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+    }
+
+    h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    p {
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+</style>
