@@ -39,6 +39,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content="/christoph-paterok.jpg" />
 
+        <!-- Plausible Analytics -->
+        <script defer data-domain="chptk.de" src="https://plausible.io/js/script.js"></script>
+
         <!-- JSON-LD structured data -->
         <script type="application/ld+json">
             {
