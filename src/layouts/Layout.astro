@@ -1,20 +1,64 @@
 ---
 interface Props {
     title: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Christoph Paterok - Product Owner specializing in Automotive IT and Digital Growth. Over 11 years of experience in MVP development and product optimization." } = Astro.props;
+
+// Base URL for canonical links
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Product Owner Portfolio" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
+        
+        <!-- Primary Meta Tags -->
         <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+        <meta name="author" content="Christoph Paterok" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/christoph-paterok.jpg" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="/christoph-paterok.jpg" />
+
+        <!-- JSON-LD structured data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Christoph Paterok",
+                "jobTitle": "Product Owner",
+                "description": "Product Owner specializing in Automotive IT and Digital Growth",
+                "image": "/christoph-paterok.jpg",
+                "url": "https://chptk.de",
+                "sameAs": [
+                    "https://de.linkedin.com/in/christoph-paterok-a9b802132"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Cologne",
+                    "addressCountry": "Germany"
+                }
+            }
+        </script>
     </head>
     <body>
         <slot />
