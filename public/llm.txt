@@ -1,0 +1,35 @@
+# Christoph Paterok - Portfolio Website Content
+
+## Personal Bio
+Christoph Paterok is a freelance Product Owner specializing in Automotive IT and organic growth strategies. With over 11 years of experience, he focuses on MVP development and product optimization, helping established businesses bring innovation back to their product portfolios.
+
+## Headline
+Innovative Product Ownership for Automotive IT and Organic Growth.
+
+## Core Skills & Offerings
+- Transforming concepts into tangible, functional MVPs
+- Managing end-to-end product pipelines
+- Analyzing and enhancing existing products
+- Optimizing user experiences to drive measurable growth
+- Concepting content pipelines for organic traffic growth
+
+## Professional Experience
+- CARAUKTION AG: Managed end-to-end product pipelines for a B2B online auction platform in Automotive IT
+- Take Memories GmbH: Concepted content pipelines for organic traffic growth across multiple websites
+
+## Contact Information
+- LinkedIn: https://de.linkedin.com/in/christoph-paterok-a9b802132
+
+## Site Structure
+1. Hero section - Headline and CTA
+2. About section - Personal introduction and background
+3. Services section - MVP Development and Product Optimization offerings
+4. Case Studies section - Showcasing work with CARAUKTION AG and Take Memories GmbH
+5. Contact section - Way to get in touch
+6. Footer - Additional information and links
+
+## Design Notes
+- Clean, modern aesthetic with ample whitespace
+- Mobile-responsive design
+- JetBrains Mono font for technical, professional appearance
+- Strategic use of CTAs to guide visitors
