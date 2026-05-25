@@ -17,6 +17,9 @@ Innovative Product Ownership for Automotive IT and Organic Growth.
 - CARAUKTION AG: Managed end-to-end product pipelines for a B2B online auction platform in Automotive IT
 - Take Memories GmbH: Concepted content pipelines for organic traffic growth across multiple websites
 
+## Podcast
+Christoph co-hosts "Zwischen zwei Stacks" with Jens Becker, a hands-on product and tech podcast publishing a new episode every two weeks. Website: https://www.zwischenzweistacks.de (also on Spotify, YouTube, and Apple Podcasts).
+
 ## Contact Information
 - LinkedIn: https://de.linkedin.com/in/christoph-paterok-a9b802132
 
@@ -25,8 +28,9 @@ Innovative Product Ownership for Automotive IT and Organic Growth.
 2. About section - Personal introduction and background
 3. Services section - MVP Development and Product Optimization offerings
 4. Case Studies section - Showcasing work with CARAUKTION AG and Take Memories GmbH
-5. Contact section - Way to get in touch
-6. Footer - Additional information and links
+5. Podcast section - "Zwischen zwei Stacks" podcast, co-hosted with Jens Becker
+6. Contact section - Way to get in touch
+7. Footer - Additional information and links
 
 ## Design Notes
 - Clean, modern aesthetic with ample whitespace
