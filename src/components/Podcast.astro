@@ -1,0 +1,153 @@
+---
+import Container from './Container.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const platforms = [
+    {
+        name: 'Spotify',
+        url: 'https://open.spotify.com/show/1P1rz2g8dR472pfRYer24U',
+        path: 'M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.96-.6-.12-.421.18-.84.6-.96 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.819 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.561.3z',
+    },
+    {
+        name: 'YouTube',
+        url: 'https://www.youtube.com/@zwischenzweistacks',
+        path: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
+    },
+    {
+        name: 'Apple Podcasts',
+        url: 'https://podcasts.apple.com/us/podcast/zwischen-zwei-stacks/id1896309882',
+        path: 'M5.34 0A5.328 5.328 0 0 0 0 5.34v13.32A5.328 5.328 0 0 0 5.34 24h13.32A5.328 5.328 0 0 0 24 18.66V5.34A5.328 5.328 0 0 0 18.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392.12.59.12 2.2.007 2.864a8.506 8.506 0 0 1-3.24 5.296c-.532.404-1.832 1.122-2.036 1.122-.075 0-.082-.083-.052-.464.046-.534.105-.654.4-.805 1.752-.92 2.97-2.487 3.405-4.396.135-.595.15-.71.15-1.59 0-.875-.015-.997-.149-1.585-.475-2.069-1.928-3.776-3.825-4.476-1.83-.676-3.99-.475-5.67.527-1.514.902-2.56 2.366-2.964 4.146-.124.54-.135.65-.135 1.395 0 .863.052 1.293.262 1.974.359 1.158 1.024 2.176 1.927 2.951l.21.18-.075.225c-.135.41-.196.567-.27.65-.149.165-.21.165-.45-.03-1.665-1.337-2.667-3.3-2.847-5.564-.18-2.256.36-4.197 1.65-5.937 1.515-2.042 3.93-3.21 6.479-3.21l.001.001zm-.06 2.926c.585 0 1.05.103 1.526.34 1.014.503 1.696 1.466 1.84 2.594.07.55.03 1.057-.135 1.594-.06.196-.135.413-.165.49l-.06.135.18.27c.69.99.585 2.31-.255 3.225-.45.49-1.05.78-1.665.81-.06 0-.165-.09-.39-.45l-.345-.51.24-.225c.6-.566.66-1.515.135-2.13-.39-.46-.99-.66-1.575-.51-.06.015-.135.03-.165.045-.165.06-.42.12-.555.135-.6.052-1.245-.36-1.5-.96-.075-.18-.09-.27-.09-.585 0-.405.045-.54.27-.84.405-.54 1.065-.81 1.71-.69h.07l-.045-.135c-.18-.51-.21-.99-.105-1.515.21-1.005 1.05-1.74 2.07-1.86.075-.015.135-.015.135-.03.015-.015.06-.03.06-.045h-.793zm.045 4.86c.27 0 .54.075.78.225.39.255.66.69.69 1.155.045.555-.165 1.05-.6 1.395l-.15.12.21 1.395c.18 1.155.21 1.44.165 1.605-.105.42-.405.69-.84.81-.135.03-.555.03-.69 0-.435-.12-.735-.39-.84-.81-.045-.165-.015-.45.165-1.605l.21-1.395-.15-.12c-.69-.555-.69-1.59 0-2.145.24-.18.555-.285.84-.285l.015-.045z',
+    },
+];
+---
+<section class="podcast" id="podcast">
+    <Container>
+        <SectionHeading text="Sharing What I Learn" />
+        <p class="subheading">Zwischen zwei Stacks — a bi-weekly product &amp; tech podcast</p>
+        <p class="description">
+            Together with Jens Becker, I co-host <em>Zwischen zwei Stacks</em> — a hands-on podcast
+            about building real software and digital products. Every two weeks we dig into the tools,
+            stacks, and decisions behind the work. No hype, just lessons from the day-to-day.
+        </p>
+        <div class="platforms">
+            {platforms.map((platform) => (
+                <a
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="platform"
+                    aria-label={`Listen on ${platform.name}`}
+                >
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d={platform.path} />
+                    </svg>
+                    <span>{platform.name}</span>
+                </a>
+            ))}
+        </div>
+        <a
+            href="https://www.zwischenzweistacks.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta"
+        >
+            Visit zwischenzweistacks.de
+        </a>
+    </Container>
+</section>
+
+<style>
+    .podcast {
+        padding: 6rem 0;
+        scroll-margin-top: 5rem;
+    }
+
+    .subheading {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.8;
+    }
+
+    .description {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        max-width: 700px;
+        margin-bottom: 2.5rem;
+    }
+
+    .description em {
+        font-style: italic;
+        color: var(--primary-color);
+    }
+
+    .platforms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .platform {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .platform svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .platform:hover {
+        transform: translateY(-4px);
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .cta {
+        font-family: 'JetBrains Mono', monospace;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .cta:hover {
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .podcast {
+            padding: 4rem 0;
+        }
+
+        .subheading {
+            font-size: 1.25rem;
+        }
+
+        .description {
+            font-size: 1rem;
+        }
+
+        .platforms {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .platform {
+            justify-content: center;
+        }
+    }
+</style>
